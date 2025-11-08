@@ -1,0 +1,572 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 8,
+    "passes": 6,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-11-08T16:29:12.139Z",
+    "end": "2025-11-08T16:29:57.714Z",
+    "duration": 45575,
+    "testsRegistered": 8,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "111a3ca1-ef87-4cdf-ae03-dc5185927911",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4b3a834f-fc47-4389-8279-0b1346babafb",
+          "title": "Register",
+          "fullFile": "D:\\projekan\\test_case\\tc01_register.test.js",
+          "file": "\\test_case\\tc01_register.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Register\"",
+              "fullTitle": "Register \"before each\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 3333,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();\nawait driver.manage().window().maximize();\nawait driver.get('https://parabank.parasoft.com/parabank/index.htm');",
+              "err": {},
+              "uuid": "0443bfcd-d7c2-4582-b94c-001938ff0bbf",
+              "parentUUID": "4b3a834f-fc47-4389-8279-0b1346babafb",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Register\"",
+              "fullTitle": "Register \"after each\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 2122,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.sleep(2000);\nawait driver.quit();",
+              "err": {},
+              "uuid": "22058cb7-883c-4f78-8c65-6048d5a58fc6",
+              "parentUUID": "4b3a834f-fc47-4389-8279-0b1346babafb",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Register",
+              "fullTitle": "Register Register",
+              "timedOut": false,
+              "duration": 4632,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const pageRegister = new registered(driver);\nawait pageRegister.registerr();\nawait pageRegister.inputnamaAwal(\"liiiii\");\nawait pageRegister.inputnamaAkhir(\"yono\");\nawait pageRegister.inputalamat(\"mangga 30\");\nawait pageRegister.inputkota(\"kota\");\nawait pageRegister.inputsetate(\"state\");\nawait pageRegister.inputkode(\"456\");\nawait pageRegister.inputnomorhp(\"456\");\nawait pageRegister.inputesesn(\"456\");\nawait pageRegister.putusername(\"ayam\");\nawait pageRegister.putpassword(\"123\");\nawait pageRegister.putrepetpass(\"123\");\nawait driver.sleep(3000);\nawait pageRegister.klikregisakhir();\nconst isDisplayed = await pageRegister.assertnya();\nassert.ok(isDisplayed.includes('Welcome ayam'), 'Nama welcome tidak sesuai');",
+              "err": {
+                "message": "AssertionError: Nama welcome tidak sesuai",
+                "estack": "AssertionError [ERR_ASSERTION]: Nama welcome tidak sesuai\n    at Context.<anonymous> (file:///D:/projekan/test_case/tc01_register.test.js:49:16)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": "- false\n+ true\n"
+              },
+              "uuid": "4b6f1d92-a893-4ffc-9c1a-07d4948855c4",
+              "parentUUID": "4b3a834f-fc47-4389-8279-0b1346babafb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4b6f1d92-a893-4ffc-9c1a-07d4948855c4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4632,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        },
+        {
+          "uuid": "a2f81a74-5ee3-43dd-9f60-4c69648f46fe",
+          "title": "Login",
+          "fullFile": "D:\\projekan\\test_case\\tc02_login.test.js",
+          "file": "\\test_case\\tc02_login.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Login\"",
+              "fullTitle": "Login \"before each\" hook in \"Login\"",
+              "timedOut": false,
+              "duration": 2408,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();\nawait driver.manage().window().maximize();\nawait driver.get('https://parabank.parasoft.com/parabank/index.htm');",
+              "err": {},
+              "uuid": "4bc5b022-e5ed-4711-bf3c-cab75a4792fa",
+              "parentUUID": "a2f81a74-5ee3-43dd-9f60-4c69648f46fe",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Login\"",
+              "fullTitle": "Login \"after each\" hook in \"Login\"",
+              "timedOut": false,
+              "duration": 2112,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.sleep(2000);\nawait driver.quit();",
+              "err": {},
+              "uuid": "c85b1af0-826c-4081-82a2-7b7febcf1975",
+              "parentUUID": "a2f81a74-5ee3-43dd-9f60-4c69648f46fe",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "Login Login",
+              "timedOut": false,
+              "duration": 169,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const pageLogin = new Login(driver);\nawait pageLogin.inputnamanya(\"lulu\", \"123\");\nconst isDisplayed = await pageLogin.akunOverview();\nassert.ok(isDisplayed.includes('Accounts Overview'));",
+              "err": {
+                "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(),'Accounts Overview')]\"}\n  (Session info: chrome=142.0.7444.60)",
+                "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(),'Accounts Overview')]\"}\n  (Session info: chrome=142.0.7444.60)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:524:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:456:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Login.akunOverview (file:///D:/projekan/pom/pg_login.js:27:24)\n    at async Context.<anonymous> (file:///D:/projekan/test_case/tc02_login.test.js:33:29)",
+                "diff": null
+              },
+              "uuid": "293df2ba-5a6c-427b-b66e-5cd3fad0aecc",
+              "parentUUID": "a2f81a74-5ee3-43dd-9f60-4c69648f46fe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "293df2ba-5a6c-427b-b66e-5cd3fad0aecc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 169,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        },
+        {
+          "uuid": "b9d12bb9-5e49-4c45-aad9-02b90f4ba543",
+          "title": "Register",
+          "fullFile": "D:\\projekan\\test_case\\tc03_bukatabungan.test.js",
+          "file": "\\test_case\\tc03_bukatabungan.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Register\"",
+              "fullTitle": "Register \"before all\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 2576,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();\nawait driver.manage().window().maximize();\nawait driver.get('https://parabank.parasoft.com/parabank/index.htm');\nconst pageLogin = new Login(driver);\nawait pageLogin.inputnamanya(\"lulu\", \"123\");",
+              "err": {},
+              "uuid": "509764da-82c9-48c1-b4c4-bebedd8250e6",
+              "parentUUID": "b9d12bb9-5e49-4c45-aad9-02b90f4ba543",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Register\"",
+              "fullTitle": "Register \"after all\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 2137,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.sleep(2000);\nawait driver.quit();",
+              "err": {},
+              "uuid": "7c22fa4e-c83e-436b-aab2-eb1f4dd7412f",
+              "parentUUID": "b9d12bb9-5e49-4c45-aad9-02b90f4ba543",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Buka Tabungan checking",
+              "fullTitle": "Register Buka Tabungan checking",
+              "timedOut": false,
+              "duration": 2208,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const pageTabungan = new openTabungan(driver);\nawait pageTabungan.klikChecking(\"0\", \"20559\");\n//assert\nconst text = await pageTabungan.suksestf();\n// console.log(\"DEBUG: teks yang muncul =\", text);\nassert.ok(text.includes('Account Opened!'), 'akun gagal dibuat');",
+              "err": {},
+              "uuid": "1ad30837-b6e9-4e22-a399-7d7a898e10a6",
+              "parentUUID": "b9d12bb9-5e49-4c45-aad9-02b90f4ba543",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buka Tabungan saving",
+              "fullTitle": "Register Buka Tabungan saving",
+              "timedOut": false,
+              "duration": 1662,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const pageTabungan = new openTabungan(driver);\nawait pageTabungan.klikSaving(\"1\", \"20559\");\n//assert\nconst text = await pageTabungan.suksestf();\nassert.ok(text.includes('Account Opened!'), 'akun gagal dibuat');",
+              "err": {},
+              "uuid": "bb827ade-c21a-4bf3-812b-8a2eaecb0738",
+              "parentUUID": "b9d12bb9-5e49-4c45-aad9-02b90f4ba543",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1ad30837-b6e9-4e22-a399-7d7a898e10a6",
+            "bb827ade-c21a-4bf3-812b-8a2eaecb0738"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3870,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        },
+        {
+          "uuid": "16d50538-15d9-47dd-bee9-eb6989c6fee0",
+          "title": "Register",
+          "fullFile": "D:\\projekan\\test_case\\tc04_transfer.test.js",
+          "file": "\\test_case\\tc04_transfer.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Register\"",
+              "fullTitle": "Register \"before all\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 3579,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();\nawait driver.manage().window().maximize();\nawait driver.get('https://parabank.parasoft.com/parabank/index.htm');\nconst pageLogin = new Login(driver);\nawait pageLogin.inputnamanya(\"lala\", \"123\");",
+              "err": {},
+              "uuid": "cd57c9a0-1e87-4091-ad45-493eb23975cd",
+              "parentUUID": "16d50538-15d9-47dd-bee9-eb6989c6fee0",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Register\"",
+              "fullTitle": "Register \"after all\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 2123,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.sleep(2000);\nawait driver.quit();",
+              "err": {},
+              "uuid": "3dd72c1d-0430-4cc4-b119-cd978416f7b4",
+              "parentUUID": "16d50538-15d9-47dd-bee9-eb6989c6fee0",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Transer",
+              "fullTitle": "Register Transer",
+              "timedOut": false,
+              "duration": 1226,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const pageTransfer = new formtransfer(driver);\nawait pageTransfer.Istransfersuccses(\"10\", \"16119\", \"16341\");\nconst text = await pageTransfer.suksestf();\n// console.log(\"DEBUG: teks yang muncul =\", text);\nassert.ok(text.includes('Transfer Complete!'), 'transfer gagal');",
+              "err": {},
+              "uuid": "f1ab65d2-58fd-49c7-810a-dd3a1567a066",
+              "parentUUID": "16d50538-15d9-47dd-bee9-eb6989c6fee0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f1ab65d2-58fd-49c7-810a-dd3a1567a066"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1226,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        },
+        {
+          "uuid": "1ba66660-5f92-43a9-a5af-b90dae2af0b8",
+          "title": "Register",
+          "fullFile": "D:\\projekan\\test_case\\tc05_historiTransfer.test.js",
+          "file": "\\test_case\\tc05_historiTransfer.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Register\"",
+              "fullTitle": "Register \"before all\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 3170,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();\nawait driver.manage().window().maximize();\nawait driver.get('https://parabank.parasoft.com/parabank/index.htm');\nconst pageLogin = new Login(driver);\nawait pageLogin.inputnamanya(\"lulu\", \"123\");",
+              "err": {},
+              "uuid": "5d314389-6688-462e-acbe-8bf4ecd03e24",
+              "parentUUID": "1ba66660-5f92-43a9-a5af-b90dae2af0b8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Register\"",
+              "fullTitle": "Register \"after all\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 2135,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.sleep(2000);\nawait driver.quit();",
+              "err": {},
+              "uuid": "2d1da46b-ceee-411a-a81a-cf47d37d0e6c",
+              "parentUUID": "1ba66660-5f92-43a9-a5af-b90dae2af0b8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Histori transfer",
+              "fullTitle": "Register Histori transfer",
+              "timedOut": false,
+              "duration": 1976,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const PageRiwayat = new Historitf(driver);\nawait PageRiwayat.riwayatTf(\"20781\", \"10\");\nconst isDisplayed = await PageRiwayat.viewDisplay();\nassert.ok(isDisplayed.includes('Transaction Results'));",
+              "err": {},
+              "uuid": "201a552e-0af3-430a-b894-9bebc7316a49",
+              "parentUUID": "1ba66660-5f92-43a9-a5af-b90dae2af0b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "201a552e-0af3-430a-b894-9bebc7316a49"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1976,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        },
+        {
+          "uuid": "72242dc2-423b-4331-937f-f185f39460f6",
+          "title": "Register",
+          "fullFile": "D:\\projekan\\test_case\\tc06_pinjaman.test.js",
+          "file": "\\test_case\\tc06_pinjaman.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Register\"",
+              "fullTitle": "Register \"before all\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 3323,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();\nawait driver.manage().window().maximize();\nawait driver.get('https://parabank.parasoft.com/parabank/index.htm');\nconst baru1 = new Login(driver);\nawait baru1.inputnamanya(\"lala\", \"123\");",
+              "err": {},
+              "uuid": "1460419a-ed94-4d6a-a61f-7bbde3ef5006",
+              "parentUUID": "72242dc2-423b-4331-937f-f185f39460f6",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Register\"",
+              "fullTitle": "Register \"after all\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 2126,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.sleep(2000);\nawait driver.quit();",
+              "err": {},
+              "uuid": "02a91d9e-2ec0-424a-a586-7524fde7e8da",
+              "parentUUID": "72242dc2-423b-4331-937f-f185f39460f6",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Pinjaman Disetujui",
+              "fullTitle": "Register Pinjaman Disetujui",
+              "timedOut": false,
+              "duration": 1301,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const page_pinjaman = new pagePinjaman(driver);\nconst inputto = await page_pinjaman.isLoanSucces(\"100\", \"10\", \"16119\");\nassert.ok(inputto.resultTitle.includes('Approved'), 'gagal di approve');\nconsole.log(\"Status:\", inputto.resultTitle);",
+              "err": {},
+              "uuid": "93990505-133a-46fd-9e9e-a89c6bece9c0",
+              "parentUUID": "72242dc2-423b-4331-937f-f185f39460f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Pinjaman Ditolak",
+              "fullTitle": "Register Pinjaman Ditolak",
+              "timedOut": false,
+              "duration": 1226,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const page_pinjaman = new pagePinjaman(driver);\nconst inputto = await page_pinjaman.isLoanSucces(\"100000000000\", \"10\", \"16119\");\nassert.ok(inputto.resultTitle.includes('Denied'), 'gagal di denied');\nconsole.log(\"Status:\", inputto.resultTitle); //assert",
+              "err": {},
+              "uuid": "b9a938bf-4c7a-477f-ba3c-92ad92702516",
+              "parentUUID": "72242dc2-423b-4331-937f-f185f39460f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "93990505-133a-46fd-9e9e-a89c6bece9c0",
+            "b9a938bf-4c7a-477f-ba3c-92ad92702516"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2527,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.4"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report_all",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report/report_all",
+        "reportFilename": "report_all"
+      },
+      "version": "6.3.0"
+    }
+  }
+}

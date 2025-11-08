@@ -1,0 +1,160 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-08T16:30:58.239Z",
+    "end": "2025-11-08T16:31:06.795Z",
+    "duration": 8556,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fccc2fe8-fcc1-4f83-9d97-d3729051015c",
+      "title": "",
+      "fullFile": "D:\\projekan\\test_case\\tc03_bukatabungan.test.js",
+      "file": "\\test_case\\tc03_bukatabungan.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6edc70d8-1aba-4606-8da2-d48445304a7e",
+          "title": "Register",
+          "fullFile": "D:\\projekan\\test_case\\tc03_bukatabungan.test.js",
+          "file": "\\test_case\\tc03_bukatabungan.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Register\"",
+              "fullTitle": "Register \"before all\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 2636,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();\nawait driver.manage().window().maximize();\nawait driver.get('https://parabank.parasoft.com/parabank/index.htm');\nconst pageLogin = new Login(driver);\nawait pageLogin.inputnamanya(\"lulu\", \"123\");",
+              "err": {},
+              "uuid": "9a156605-8bc4-4cfa-ba3f-4d5d9549bbb7",
+              "parentUUID": "6edc70d8-1aba-4606-8da2-d48445304a7e",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Register\"",
+              "fullTitle": "Register \"after all\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 2122,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.sleep(2000);\nawait driver.quit();",
+              "err": {},
+              "uuid": "766ac281-7f15-4f09-bf8a-024e63f73c88",
+              "parentUUID": "6edc70d8-1aba-4606-8da2-d48445304a7e",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Buka Tabungan checking",
+              "fullTitle": "Register Buka Tabungan checking",
+              "timedOut": false,
+              "duration": 2342,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const pageTabungan = new openTabungan(driver);\nawait pageTabungan.klikChecking(\"0\", \"20559\");\n//assert\nconst text = await pageTabungan.suksestf();\n// console.log(\"DEBUG: teks yang muncul =\", text);\nassert.ok(text.includes('Account Opened!'), 'akun gagal dibuat');",
+              "err": {},
+              "uuid": "4bdd3835-37fa-4d87-99d7-9da9ff10df7b",
+              "parentUUID": "6edc70d8-1aba-4606-8da2-d48445304a7e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buka Tabungan saving",
+              "fullTitle": "Register Buka Tabungan saving",
+              "timedOut": false,
+              "duration": 1444,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const pageTabungan = new openTabungan(driver);\nawait pageTabungan.klikSaving(\"1\", \"20559\");\n//assert\nconst text = await pageTabungan.suksestf();\nassert.ok(text.includes('Account Opened!'), 'akun gagal dibuat');",
+              "err": {},
+              "uuid": "06199388-f2c6-4c06-a39a-3fef5f304d78",
+              "parentUUID": "6edc70d8-1aba-4606-8da2-d48445304a7e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4bdd3835-37fa-4d87-99d7-9da9ff10df7b",
+            "06199388-f2c6-4c06-a39a-3fef5f304d78"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3786,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.4"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "tc03_bukatabungan",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report/report_bukatabungan",
+        "reportFilename": "tc03_bukatabungan"
+      },
+      "version": "6.3.0"
+    }
+  }
+}

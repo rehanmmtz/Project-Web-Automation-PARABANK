@@ -1,0 +1,26 @@
+{
+  "name": "projekan",
+  "version": "1.0.0",
+  "description": "Testing bank using selenium",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test_01": "mocha \"test_case/tc01_register.test.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_register,reportFilename=tc01_register",
+    "test_02": "mocha \"test_case/tc02_login.test.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_login,reportFilename=tc02_login",
+    "test_03": "mocha \"test_case/tc03_bukatabungan.test.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_bukatabungan,reportFilename=tc03_bukatabungan",
+    "test_04": "mocha \"test_case/tc04_transfer.test.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_transfer,reportFilename=tc04_transfer",
+    "test_05": "mocha \"test_case/tc05_historiTransfer.test.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_historiTransfer,reportFilename=tc05_historiTransfer",
+    "test_06": "mocha \"test_case/tc06_pinjaman.test.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_pinjaman,reportFilename=tc06_pinjaman",
+    "test_all": "mocha \"test_case/**/*.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_all,reportFilename=report_all"
+  },
+  "author": "rehan",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "^4.38.0"
+  },
+  "devDependencies": {
+    "mocha": "^11.7.4",
+    "mocha-simple-html-reporter": "^2.0.0",
+    "mochawesome": "^7.1.4"
+  }
+}
