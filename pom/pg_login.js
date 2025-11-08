@@ -13,22 +13,22 @@ class Login {
 
     async inputnamanya(boxusername, boxpassword) {
         const inputnamaya = await this.driver.findElement(Login.boxusername);
-        await this.driver.wait(until.elementIsVisible(inputnamaya), 5000);
+        await this.driver.wait(until.elementIsVisible(inputnamaya), 2000);
         await inputnamaya.sendKeys(boxusername);
 
         const inputpwya = await this.driver.findElement(Login.boxpassword);
-        await this.driver.wait(until.elementIsVisible(inputpwya), 5000);
+        await this.driver.wait(until.elementIsVisible(inputpwya), 2000);
         await inputpwya.sendKeys(boxpassword);
 
         const submitya = await this.driver.findElement(Login.submit);
-        await this.driver.wait(until.elementIsVisible(submitya), 5000);
+        await this.driver.wait(until.elementIsVisible(submitya), 2000);
         await submitya.click();
     };
 
     //assert
     async akunOverview() {
         const assert = await this.driver.findElement(Login.overviewdisplay);
-        await this.driver.wait(until.elementIsVisible(assert), 5000);
+        await this.driver.wait(until.elementIsVisible(assert), 2000);
         return await assert.getText();
     };
 
