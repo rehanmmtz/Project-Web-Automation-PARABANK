@@ -1,4 +1,4 @@
-import { By } from 'selenium-webdriver';
+import { By, until } from 'selenium-webdriver';
 
 class Login {
     constructor(driver) {
@@ -13,12 +13,15 @@ class Login {
 
     async inputnamanya(boxusername, boxpassword) {
         const inputnamaya = await this.driver.findElement(Login.boxusername);
+        await this.driver.wait(until.elementIsVisible(inputnamaya), 5000);
         await inputnamaya.sendKeys(boxusername);
 
         const inputpwya = await this.driver.findElement(Login.boxpassword);
+        await this.driver.wait(until.elementIsVisible(inputpwya), 5000);
         await inputpwya.sendKeys(boxpassword);
 
         const submitya = await this.driver.findElement(Login.submit);
+        await this.driver.wait(until.elementIsVisible(submitya), 5000);
         await submitya.click();
     };
 

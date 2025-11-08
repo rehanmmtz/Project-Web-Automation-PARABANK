@@ -22,7 +22,7 @@ describe('Register', function () {
         await driver.manage().window().maximize();
         await driver.get('https://parabank.parasoft.com/parabank/index.htm');
         const pageLogin = new Login(driver);
-        await pageLogin.inputnamanya("rehan", "123");
+        await pageLogin.inputnamanya("rehan03", "123");
     });
 
     after(async function () {
@@ -32,7 +32,7 @@ describe('Register', function () {
 
     it("Histori transfer", async function () {
         const PageRiwayat = new Historitf(driver);
-        await PageRiwayat.riwayatTf("20781", "10");
+        await PageRiwayat.riwayatTf("15897", "10");
 
         const isDisplayed = await PageRiwayat.viewDisplay();
         assert.ok(isDisplayed.includes('Transaction Results'));

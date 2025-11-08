@@ -23,7 +23,7 @@ describe('Register', function () {
         await driver.manage().window().maximize();
         await driver.get('https://parabank.parasoft.com/parabank/index.htm');
         const pageLogin = new Login(driver);
-        await pageLogin.inputnamanya("rehan", "123");
+        await pageLogin.inputnamanya("rehan03", "123");
     });
 
     after(async function () {
@@ -33,7 +33,7 @@ describe('Register', function () {
 
     it("Buka Tabungan checking", async function () {
         const pageTabungan = new openTabungan(driver);
-        await pageTabungan.klikChecking("0", "20559");
+        await pageTabungan.klikChecking("0", "15897");
 
         //assert
         const text = await pageTabungan.suksestf();
@@ -46,7 +46,7 @@ describe('Register', function () {
 
     it("Buka Tabungan saving", async function () {
         const pageTabungan = new openTabungan(driver);
-        await pageTabungan.klikSaving("1", "20559");
+        await pageTabungan.klikSaving("1", "15897");
 
         //assert
         const text = await pageTabungan.suksestf();

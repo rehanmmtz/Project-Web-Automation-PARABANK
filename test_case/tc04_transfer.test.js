@@ -22,7 +22,7 @@ describe('Register', function () {
         await driver.manage().window().maximize();
         await driver.get('https://parabank.parasoft.com/parabank/index.htm');
         const pageLogin = new Login(driver);
-        await pageLogin.inputnamanya("rehan", "123");
+        await pageLogin.inputnamanya("rehan03", "123");
     });
 
     after(async function () {
@@ -32,7 +32,7 @@ describe('Register', function () {
 
     it("Transer", async function () {
         const pageTransfer = new formtransfer(driver);
-        await pageTransfer.Istransfersuccses("10", "16119", "16341");
+        await pageTransfer.Istransfersuccses("10", "15897", "16008");
 
         const text = await pageTransfer.suksestf();
         // console.log("DEBUG: teks yang muncul =", text);

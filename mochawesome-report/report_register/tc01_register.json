@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2025-11-08T16:30:20.425Z",
-    "end": "2025-11-08T16:30:29.640Z",
-    "duration": 9215,
+    "failures": 0,
+    "start": "2025-11-08T19:19:52.126Z",
+    "end": "2025-11-08T19:20:01.998Z",
+    "duration": 9872,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9793e814-7b8a-46f4-9399-ef15e65e5c1b",
+      "uuid": "632fd159-3bb9-46d1-986d-d495ae9cdd0c",
       "title": "",
       "fullFile": "D:\\projekan\\test_case\\tc01_register.test.js",
       "file": "\\test_case\\tc01_register.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a508c79c-70bb-4e26-932e-8e557bbbb360",
+          "uuid": "9b14a3b5-29fe-438b-aef4-fa60cdbeed34",
           "title": "Register",
           "fullFile": "D:\\projekan\\test_case\\tc01_register.test.js",
           "file": "\\test_case\\tc01_register.test.js",
@@ -36,7 +36,7 @@
               "title": "\"before each\" hook in \"Register\"",
               "fullTitle": "Register \"before each\" hook in \"Register\"",
               "timedOut": false,
-              "duration": 2518,
+              "duration": 2448,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();\nawait driver.manage().window().maximize();\nawait driver.get('https://parabank.parasoft.com/parabank/index.htm');",
               "err": {},
-              "uuid": "e9cb208a-996e-4501-b0d0-341e8c96a9eb",
-              "parentUUID": "a508c79c-70bb-4e26-932e-8e557bbbb360",
+              "uuid": "53036453-227a-46bb-bbab-f0024f6b9e16",
+              "parentUUID": "9b14a3b5-29fe-438b-aef4-fa60cdbeed34",
               "isHook": true,
               "skipped": false
             }
@@ -56,7 +56,7 @@
               "title": "\"after each\" hook in \"Register\"",
               "fullTitle": "Register \"after each\" hook in \"Register\"",
               "timedOut": false,
-              "duration": 2132,
+              "duration": 2119,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "await driver.sleep(2000);\nawait driver.quit();",
               "err": {},
-              "uuid": "f75ddf85-93d1-401d-99c2-ddc1a090ea2c",
-              "parentUUID": "a508c79c-70bb-4e26-932e-8e557bbbb360",
+              "uuid": "00001279-e582-4b73-8697-81ae5972c087",
+              "parentUUID": "9b14a3b5-29fe-438b-aef4-fa60cdbeed34",
               "isHook": true,
               "skipped": false
             }
@@ -76,33 +76,29 @@
               "title": "Register",
               "fullTitle": "Register Register",
               "timedOut": false,
-              "duration": 4555,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 5297,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "const pageRegister = new registered(driver);\nawait pageRegister.registerr();\nawait pageRegister.inputnamaAwal(\"liiiii\");\nawait pageRegister.inputnamaAkhir(\"yono\");\nawait pageRegister.inputalamat(\"mangga 30\");\nawait pageRegister.inputkota(\"kota\");\nawait pageRegister.inputsetate(\"state\");\nawait pageRegister.inputkode(\"456\");\nawait pageRegister.inputnomorhp(\"456\");\nawait pageRegister.inputesesn(\"456\");\nawait pageRegister.putusername(\"ayam\");\nawait pageRegister.putpassword(\"123\");\nawait pageRegister.putrepetpass(\"123\");\nawait driver.sleep(3000);\nawait pageRegister.klikregisakhir();\nconst isDisplayed = await pageRegister.assertnya();\nassert.ok(isDisplayed.includes('Welcome ayam'), 'Nama welcome tidak sesuai');",
-              "err": {
-                "message": "AssertionError: Nama welcome tidak sesuai",
-                "estack": "AssertionError [ERR_ASSERTION]: Nama welcome tidak sesuai\n    at Context.<anonymous> (file:///D:/projekan/test_case/tc01_register.test.js:49:16)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
-                "diff": "- false\n+ true\n"
-              },
-              "uuid": "5d026173-59d7-48f9-87c8-daf4fd8c1c74",
-              "parentUUID": "a508c79c-70bb-4e26-932e-8e557bbbb360",
+              "code": "const pageRegister = new registered(driver);\nawait pageRegister.registerr();\nawait pageRegister.inputnamaAwal(\"rehan\");\nawait pageRegister.inputnamaAkhir(\"naher\");\nawait pageRegister.inputalamat(\"Jl. Semangka No. 1\");\nawait pageRegister.inputkota(\"Jakarta\");\nawait pageRegister.inputsetate(\"Indonesia\");\nawait pageRegister.inputkode(\"123\");\nawait pageRegister.inputnomorhp(\"12345\");\nawait pageRegister.inputesesn(\"789\");\nawait pageRegister.putusername(\"rehan03\");\nawait pageRegister.putpassword(\"123\");\nawait pageRegister.putrepetpass(\"123\");\nawait driver.sleep(3000);\nawait pageRegister.klikregisakhir();\nconst isDisplayed = await pageRegister.assertnya();\nassert.ok(isDisplayed.includes('Welcome rehan03'), 'Nama welcome tidak sesuai');\nlet full_ss = await driver.takeScreenshot();\nfs.writeFileSync('report_ss/register/sucses_register.png', Buffer.from(full_ss, 'base64'));",
+              "err": {},
+              "uuid": "7be32c58-7b77-44af-b120-c67c460f9149",
+              "parentUUID": "9b14a3b5-29fe-438b-aef4-fa60cdbeed34",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "5d026173-59d7-48f9-87c8-daf4fd8c1c74"
+          "passes": [
+            "7be32c58-7b77-44af-b120-c67c460f9149"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4555,
+          "duration": 5297,
           "root": false,
           "rootEmpty": false,
           "_timeout": 50000

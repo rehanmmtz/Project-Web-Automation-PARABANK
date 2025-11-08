@@ -30,7 +30,7 @@ describe('Login', function () {
 
     it("Login", async function () {
         const pageLogin = new Login(driver);
-        await pageLogin.inputnamanya("rehan", "123");
+        await pageLogin.inputnamanya("rehan03", "123");
 
         const isDisplayed = await pageLogin.akunOverview();
         assert.ok(isDisplayed.includes('Accounts Overview'));

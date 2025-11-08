@@ -22,7 +22,7 @@ describe('Register', function () {
         await driver.manage().window().maximize();
         await driver.get('https://parabank.parasoft.com/parabank/index.htm');
         const baru1 = new Login(driver);
-        await baru1.inputnamanya("rehan", "123");
+        await baru1.inputnamanya("rehan03", "123");
     });
 
     after(async function () {
@@ -32,7 +32,7 @@ describe('Register', function () {
 
     it("Pinjaman Disetujui", async function () {
         const page_pinjaman = new pagePinjaman(driver);
-        const inputto = await page_pinjaman.isLoanSucces("100", "10", "16119");
+        const inputto = await page_pinjaman.isLoanSucces("100", "10", "15897");
         assert.ok(inputto.resultTitle.includes('Approved'), 'gagal di approve');
         console.log("Status:", inputto.resultTitle);
 
