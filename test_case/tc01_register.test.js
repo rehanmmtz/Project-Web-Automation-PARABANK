@@ -11,7 +11,9 @@ describe('Register', function () {
     let driver;
     let options = new chrome.Options();
     options.addArguments('--incognito');
-    // options.addArguments('--headless');
+    // options.addArguments('--headless=new');
+    // options.addArguments('--no-sandbox');
+    // options.addArguments('--disable-dev-shm-usage');
     options.addArguments('--log-level=3');
 
     beforeEach(async function () {
@@ -40,7 +42,7 @@ describe('Register', function () {
         await pageRegister.inputkode("123");
         await pageRegister.inputnomorhp("12345");
         await pageRegister.inputesesn("789");
-        await pageRegister.putusername("rehan03");
+        await pageRegister.putusername("rehan16");
         await pageRegister.putpassword("123");
         await pageRegister.putrepetpass("123");
 
@@ -48,7 +50,7 @@ describe('Register', function () {
         await pageRegister.klikregisakhir();
 
         const isDisplayed = await pageRegister.assertnya();
-        assert.ok(isDisplayed.includes('Welcome rehan03'), 'Nama welcome tidak sesuai');
+        assert.ok(isDisplayed.includes('Welcome rehan16'), 'Nama welcome tidak sesuai');
 
         let full_ss = await driver.takeScreenshot();
         fs.writeFileSync('report_ss/register/sucses_register.png', Buffer.from(full_ss, 'base64'));

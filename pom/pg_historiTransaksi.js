@@ -30,7 +30,7 @@ class Historitf {
 
     async stephistori(pilihakun, nominal) {
         const linkhistori = await this.driver.findElement(Historitf.link);
-        await this.driver.wait(until.elementIsVisible(linkhistori), 5000);
+        // await this.driver.wait(until.elementIsVisible(linkhistori), 5000);
         await linkhistori.click();
 
         await this.selectAccount(pilihakun);

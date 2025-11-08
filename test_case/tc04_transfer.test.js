@@ -5,13 +5,15 @@ import Login from "../pom/pg_login.js";
 import formtransfer from "../pom/pg_transfer.js";
 import fs from 'fs';
 
-describe('Register', function () {
-    this.timeout(50000);
+describe('Transfer', function () {
+    this.timeout(10000);
 
     let driver;
     let options = new chrome.Options();
     options.addArguments('--incognito');
-    // options.addArguments('--headless');
+    options.addArguments('--headless=new');
+    options.addArguments('--no-sandbox');
+    options.addArguments('--disable-dev-shm-usage');
     options.addArguments('--log-level=3');
 
     before(async function () {
@@ -22,7 +24,7 @@ describe('Register', function () {
         await driver.manage().window().maximize();
         await driver.get('https://parabank.parasoft.com/parabank/index.htm');
         const pageLogin = new Login(driver);
-        await pageLogin.inputnamanya("rehan03", "123");
+        await pageLogin.inputnamanya("rehan16", "123");
     });
 
     after(async function () {
@@ -32,7 +34,7 @@ describe('Register', function () {
 
     it("Transer", async function () {
         const pageTransfer = new formtransfer(driver);
-        await pageTransfer.Istransfersuccses("10", "15897", "16008");
+        await pageTransfer.Istransfersuccses("10", "21780", "23334");
 
         const text = await pageTransfer.suksestf();
         // console.log("DEBUG: teks yang muncul =", text);

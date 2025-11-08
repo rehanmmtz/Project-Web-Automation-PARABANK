@@ -6,13 +6,15 @@ import openTabungan from "../pom/pg_bukatabungan.js";
 import fs from 'fs';
 
 
-describe('Register', function () {
+describe('Buka Tabungan', function () {
     this.timeout(50000);
 
     let driver;
     let options = new chrome.Options();
     options.addArguments('--incognito');
-    // options.addArguments('--headless');
+    options.addArguments('--headless=new');
+    options.addArguments('--no-sandbox');
+    options.addArguments('--disable-dev-shm-usage');
     options.addArguments('--log-level=3');
 
     before(async function () {
@@ -23,7 +25,7 @@ describe('Register', function () {
         await driver.manage().window().maximize();
         await driver.get('https://parabank.parasoft.com/parabank/index.htm');
         const pageLogin = new Login(driver);
-        await pageLogin.inputnamanya("rehan03", "123");
+        await pageLogin.inputnamanya("rehan16", "123");
     });
 
     after(async function () {
@@ -33,7 +35,7 @@ describe('Register', function () {
 
     it("Buka Tabungan checking", async function () {
         const pageTabungan = new openTabungan(driver);
-        await pageTabungan.klikChecking("0", "15897");
+        await pageTabungan.klikChecking("0", "21780");
 
         //assert
         const text = await pageTabungan.suksestf();
@@ -46,7 +48,7 @@ describe('Register', function () {
 
     it("Buka Tabungan saving", async function () {
         const pageTabungan = new openTabungan(driver);
-        await pageTabungan.klikSaving("1", "15897");
+        await pageTabungan.klikSaving("1", "21780");
 
         //assert
         const text = await pageTabungan.suksestf();

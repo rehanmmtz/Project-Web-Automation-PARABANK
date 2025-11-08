@@ -5,13 +5,15 @@ import Login from "../pom/pg_login.js";
 import pagePinjaman from "../pom/pg_pinjaman.js";
 import fs from 'fs';
 
-describe('Register', function () {
+describe('Pinjaman', function () {
     this.timeout(50000);
 
     let driver;
     let options = new chrome.Options();
     options.addArguments('--incognito');
-    // options.addArguments('--headless');
+    options.addArguments('--headless=new');
+    options.addArguments('--no-sandbox');
+    options.addArguments('--disable-dev-shm-usage');
     options.addArguments('--log-level=3');
 
     before(async function () {
@@ -22,7 +24,7 @@ describe('Register', function () {
         await driver.manage().window().maximize();
         await driver.get('https://parabank.parasoft.com/parabank/index.htm');
         const baru1 = new Login(driver);
-        await baru1.inputnamanya("rehan03", "123");
+        await baru1.inputnamanya("rehan16", "123");
     });
 
     after(async function () {
@@ -32,7 +34,7 @@ describe('Register', function () {
 
     it("Pinjaman Disetujui", async function () {
         const page_pinjaman = new pagePinjaman(driver);
-        const inputto = await page_pinjaman.isLoanSucces("100", "10", "15897");
+        const inputto = await page_pinjaman.isLoanSucces("100", "10", "21780");
         assert.ok(inputto.resultTitle.includes('Approved'), 'gagal di approve');
         console.log("Status:", inputto.resultTitle);
 
@@ -42,7 +44,7 @@ describe('Register', function () {
 
     it("Pinjaman Ditolak", async function () {
         const page_pinjaman = new pagePinjaman(driver);
-        const inputto = await page_pinjaman.isLoanSucces("10000000", "10", "16119");
+        const inputto = await page_pinjaman.isLoanSucces("10000000", "10", "21780");
         assert.ok(inputto.resultTitle.includes('Denied'), 'gagal di denied');
         console.log("Status:", inputto.resultTitle); //assert
 

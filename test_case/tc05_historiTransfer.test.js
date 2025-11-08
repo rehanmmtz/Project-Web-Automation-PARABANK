@@ -5,13 +5,15 @@ import assert from 'assert';
 import Historitf from "../pom/pg_historiTransaksi.js";
 import fs from 'fs';
 
-describe('Register', function () {
+describe('Histori Transfer', function () {
     this.timeout(50000);
 
     let driver;
     let options = new chrome.Options();
     options.addArguments('--incognito');
-    // options.addArguments('--headless');
+    options.addArguments('--headless=new');
+    options.addArguments('--no-sandbox');
+    options.addArguments('--disable-dev-shm-usage');
     options.addArguments('--log-level=3');
 
     before(async function () {
@@ -22,7 +24,7 @@ describe('Register', function () {
         await driver.manage().window().maximize();
         await driver.get('https://parabank.parasoft.com/parabank/index.htm');
         const pageLogin = new Login(driver);
-        await pageLogin.inputnamanya("rehan03", "123");
+        await pageLogin.inputnamanya("rehan16", "123");
     });
 
     after(async function () {
@@ -32,7 +34,7 @@ describe('Register', function () {
 
     it("Histori transfer", async function () {
         const PageRiwayat = new Historitf(driver);
-        await PageRiwayat.riwayatTf("15897", "10");
+        await PageRiwayat.riwayatTf("21780", "10");
 
         const isDisplayed = await PageRiwayat.viewDisplay();
         assert.ok(isDisplayed.includes('Transaction Results'));

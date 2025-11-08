@@ -17,7 +17,7 @@ class formtransfer {
 
 
     async masukinuang(inputnominal) {
-        await this.driver.wait(until.elementLocated(formtransfer.inputnominal), 5000);
+        await this.driver.wait(until.elementLocated(formtransfer.inputnominal), 2000);
         const nominal = await this.driver.findElement(formtransfer.inputnominal);
         await nominal.sendKeys(inputnominal);
     };
@@ -27,22 +27,22 @@ class formtransfer {
         await this.driver.wait(until.elementIsVisible(dropdown), 5000);
         await dropdown.click();
 
-        const option = await this.driver.wait(until.elementLocated(formtransfer.fromAccountOption(value)), 5000);
+        const option = await this.driver.wait(until.elementLocated(formtransfer.fromAccountOption(value)), 2000);
         await option.click();
     };
 
     async selectToAccount(value) {
         const dropdown = await this.driver.findElement(formtransfer.torekening);
-        await this.driver.wait(until.elementIsVisible(dropdown), 5000);
+        // await this.driver.wait(until.elementIsVisible(dropdown), 5000);
         await dropdown.click();
 
-        const option = await this.driver.wait(until.elementLocated(formtransfer.toAccountOption(value)), 5000);
+        const option = await this.driver.wait(until.elementLocated(formtransfer.toAccountOption(value)), 2000);
         await option.click();
     };
 
     async stepTransfer(inputuang, dariakun, keakun) {
         const linktransfer = await this.driver.findElement(formtransfer.transferlink);
-        await this.driver.wait(until.elementIsVisible(linktransfer), 5000);
+        // await this.driver.wait(until.elementIsVisible(linktransfer), 5000);
         await linktransfer.click();
 
         await this.masukinuang(inputuang);
@@ -50,7 +50,7 @@ class formtransfer {
         await this.selectToAccount(keakun);
 
         const submitbtn = await this.driver.findElement(formtransfer.submittransfer);
-        await this.driver.wait(until.elementIsVisible(submitbtn), 5000);
+        // await this.driver.wait(until.elementIsVisible(submitbtn), 5000);
         await submitbtn.click();
     };
 
@@ -62,9 +62,9 @@ class formtransfer {
     //assert
     async suksestf() {
         const locator = formtransfer.sukses;
-        await this.driver.wait(until.elementLocated(locator), 10000);
+        await this.driver.wait(until.elementLocated(locator), 1000);
         const element = await this.driver.findElement(locator);
-        await this.driver.wait(until.elementIsVisible(element), 5000);
+        await this.driver.wait(until.elementIsVisible(element), 2000);
         return await element.getText();
     };
 

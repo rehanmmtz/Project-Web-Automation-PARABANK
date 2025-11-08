@@ -11,7 +11,8 @@
     "test_04": "mocha \"test_case/tc04_transfer.test.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_transfer,reportFilename=tc04_transfer",
     "test_05": "mocha \"test_case/tc05_historiTransfer.test.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_historiTransfer,reportFilename=tc05_historiTransfer",
     "test_06": "mocha \"test_case/tc06_pinjaman.test.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_pinjaman,reportFilename=tc06_pinjaman",
-    "test_all": "mocha \"test_case/**/*.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_all,reportFilename=report_all"
+    "test_all": "mocha \"test_case/**/*.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_all,reportFilename=report_all",
+    "test_al": "mocha \"test_case/tc0{2,3,4,5,6}_*.test.js\" --reporter mochawesome --reporter-options reportDir=mochawesome-report/report_all,reportFilename=report_all"
   },
   "author": "rehan",
   "license": "ISC",

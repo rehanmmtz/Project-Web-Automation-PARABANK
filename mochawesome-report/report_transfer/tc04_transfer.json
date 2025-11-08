@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-11-08T19:30:52.904Z",
-    "end": "2025-11-08T19:30:59.970Z",
-    "duration": 7066,
+    "start": "2025-11-08T20:55:51.610Z",
+    "end": "2025-11-08T20:55:58.434Z",
+    "duration": 6824,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3247b303-2dc4-4c8f-8885-61570077d2e5",
+      "uuid": "e733b198-45e6-4336-9c5f-9c90b2711e3a",
       "title": "",
       "fullFile": "D:\\projekan\\test_case\\tc04_transfer.test.js",
       "file": "\\test_case\\tc04_transfer.test.js",
@@ -27,36 +27,36 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6f66c922-9b5e-402a-9fb8-1ac67e00f26e",
-          "title": "Register",
+          "uuid": "ce84d664-c02e-4e94-a920-3957d104f382",
+          "title": "Transfer",
           "fullFile": "D:\\projekan\\test_case\\tc04_transfer.test.js",
           "file": "\\test_case\\tc04_transfer.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"Register\"",
-              "fullTitle": "Register \"before all\" hook in \"Register\"",
+              "title": "\"before all\" hook in \"Transfer\"",
+              "fullTitle": "Transfer \"before all\" hook in \"Transfer\"",
               "timedOut": false,
-              "duration": 3581,
+              "duration": 2774,
               "state": null,
               "speed": null,
               "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();\nawait driver.manage().window().maximize();\nawait driver.get('https://parabank.parasoft.com/parabank/index.htm');\nconst pageLogin = new Login(driver);\nawait pageLogin.inputnamanya(\"rehan03\", \"123\");",
+              "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();\nawait driver.manage().window().maximize();\nawait driver.get('https://parabank.parasoft.com/parabank/index.htm');\nconst pageLogin = new Login(driver);\nawait pageLogin.inputnamanya(\"rehan16\", \"123\");",
               "err": {},
-              "uuid": "d9cd3493-b860-4a88-b5c7-bf3b7d31f055",
-              "parentUUID": "6f66c922-9b5e-402a-9fb8-1ac67e00f26e",
+              "uuid": "ccebbc14-8b2b-4bd5-8c81-68c6778d2047",
+              "parentUUID": "ce84d664-c02e-4e94-a920-3957d104f382",
               "isHook": true,
               "skipped": false
             }
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"Register\"",
-              "fullTitle": "Register \"after all\" hook in \"Register\"",
+              "title": "\"after all\" hook in \"Transfer\"",
+              "fullTitle": "Transfer \"after all\" hook in \"Transfer\"",
               "timedOut": false,
-              "duration": 2090,
+              "duration": 2082,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "await driver.sleep(2000);\nawait driver.quit();",
               "err": {},
-              "uuid": "83cd345f-5495-4317-b46a-915c9005bb52",
-              "parentUUID": "6f66c922-9b5e-402a-9fb8-1ac67e00f26e",
+              "uuid": "97d938be-3526-44a4-8471-203f5ebf4271",
+              "parentUUID": "ce84d664-c02e-4e94-a920-3957d104f382",
               "isHook": true,
               "skipped": false
             }
@@ -74,31 +74,31 @@
           "tests": [
             {
               "title": "Transer",
-              "fullTitle": "Register Transer",
+              "fullTitle": "Transfer Transer",
               "timedOut": false,
-              "duration": 1389,
+              "duration": 1961,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const pageTransfer = new formtransfer(driver);\nawait pageTransfer.Istransfersuccses(\"10\", \"15897\", \"16008\");\nconst text = await pageTransfer.suksestf();\n// console.log(\"DEBUG: teks yang muncul =\", text);\nassert.ok(text.includes('Transfer Complete!'), 'transfer gagal');\nlet full_ss = await driver.takeScreenshot();\nfs.writeFileSync('report_ss/transfer/sukses_tf.png', Buffer.from(full_ss, 'base64'));",
+              "code": "const pageTransfer = new formtransfer(driver);\nawait pageTransfer.Istransfersuccses(\"10\", \"21780\", \"23334\");\nconst text = await pageTransfer.suksestf();\n// console.log(\"DEBUG: teks yang muncul =\", text);\nassert.ok(text.includes('Transfer Complete!'), 'transfer gagal');\nlet full_ss = await driver.takeScreenshot();\nfs.writeFileSync('report_ss/transfer/sukses_tf.png', Buffer.from(full_ss, 'base64'));",
               "err": {},
-              "uuid": "3f4f4ebd-01ee-4077-932b-9c036ddbd26d",
-              "parentUUID": "6f66c922-9b5e-402a-9fb8-1ac67e00f26e",
+              "uuid": "4363b558-3a97-45fd-876d-e713b046e3a8",
+              "parentUUID": "ce84d664-c02e-4e94-a920-3957d104f382",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3f4f4ebd-01ee-4077-932b-9c036ddbd26d"
+            "4363b558-3a97-45fd-876d-e713b046e3a8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1389,
+          "duration": 1961,
           "root": false,
           "rootEmpty": false,
           "_timeout": 50000

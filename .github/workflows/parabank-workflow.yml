@@ -32,7 +32,7 @@ jobs:
 
       # Step 5: Run Mocha tests
       - name: Run Mocha tests
-        run: npx mocha test_case/tc02_login.test.js --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=index,quiet=true,overwrite=true,html=true,json=true
+        run: npm run test_al
 
     
       - name: Mochawesome report
