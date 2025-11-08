@@ -32,10 +32,10 @@ jobs:
 
       # Step 5: Run Mocha tests
       - name: Run Mocha tests
-        run: npm run test_all
+        run: npm run test_02
 
     
-      - name: Upload Mochawesome report
+      - name: Mochawesome report
         uses: actions/upload-artifact@v4
         with:
           name: mochawesome-report
