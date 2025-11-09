@@ -1,6 +1,17 @@
 ## 🚀 Project Testing Automation Website ParaBank With Selenium
 
-Project ini dibuat buat ngetes website **Parabank** secara automation menggunakan **Selenium WebDriver**, **JavaScript**, dan **Mocha** sebagai test framework-nya. Tujuannya biar proses testing bisa jalan otomatis, hasilnya terdokumentasi rapi, dan gampang dipantau lewat report & screenshot. Selain itu, project ini juga saya **integrasikan dengan CI/CD di GitHub Actions**, jadi setiap kali ada perubahan kode (misalnya push atau pull request), Semua hasil test (termasuk **report** dan **screenshot**) otomatis tersimpan, sehingga mudah dipantau dan dievaluasi. pipeline juga otomatis akan jalan buat ngecek apakah semua test masih aman. Kalau ada test yang gagal, status build langsung kelihatan di GitHub, jadi bisa cepat diperbaiki sebelum di-merge ke branch utama. CI/CD ini juga bantu banget buat memastikan kualitas aplikasi tetap terjaga tanpa perlu jalanin test manual tiap kali ada update kode. Semua serba otomatis 💨  
+Project ini dibuat buat ngetes website **Parabank** secara automation menggunakan **Selenium WebDriver**, **JavaScript**, dan **Mocha** sebagai test framework-nya. Tujuannya biar proses testing bisa jalan otomatis, hasilnya terdokumentasi rapi, dan gampang dipantau lewat report & screenshot. Selain itu, project ini juga saya **integrasikan dengan CI/CD di GitHub Actions**, jadi setiap kali ada perubahan kode (misalnya push atau pull request), Semua hasil test (termasuk **report** dan **screenshot**) otomatis tersimpan, sehingga mudah dipantau dan dievaluasi. pipeline juga otomatis akan jalan buat ngecek apakah semua test masih aman. Kalau ada test yang gagal, status build langsung kelihatan di GitHub, jadi bisa cepat diperbaiki sebelum di-merge ke branch utama. CI/CD ini juga bantu banget buat memastikan kualitas aplikasi tetap terjaga tanpa perlu jalanin test manual tiap kali ada update kode. Semua serba otomatis 💨
+
+## 🎯 Scope Pengujian
+
+Project ini mencakup automated test untuk beberapa fitur utama di Parabank, antara lain:
+
+- **Register** – Pendaftaran akun baru.  
+- **Login** – Autentikasi pengguna dengan username & password.  
+- **Buka Tabungan** – Membuka rekening baru, baik **Checking** maupun **Savings**.  
+- **Transfer Sukses** – Melakukan transfer antar rekening dengan sukses.  
+- **Riwayat Transfer** – Mengecek histori transaksi transfer.  
+- **Pinjaman** – Mengajukan pinjaman dan memverifikasi apakah disetujui atau tidak.
 
 ## 🧰 Tech Stack
 
