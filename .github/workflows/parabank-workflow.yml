@@ -32,7 +32,7 @@ jobs:
 
       # Step 5: Run Mocha tests
       - name: Run Mocha tests
-        run: npm run test_al
+        run: npm run test_03
 
     
       - name: Mochawesome report
