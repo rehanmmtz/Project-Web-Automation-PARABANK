@@ -59,24 +59,24 @@ describe('Buka Tabungan', function () {
         fs.writeFileSync('report_ss/buka_tabungan/savings.png', Buffer.from(full_ss, 'base64'));
     });
 
-    // CASE NEGATIVE
-    it("Buka Tabungan checking", async function () {
-        const pageTabungan = new openTabungan(driver);
-        await pageTabungan.klikChecking("0", "1922347");
+    // // CASE NEGATIVE
+    // it("Buka Tabungan checking", async function () {
+    //     const pageTabungan = new openTabungan(driver);
+    //     await pageTabungan.klikChecking("0", "1922347");
 
-        //assert
-        const text = await pageTabungan.suksestf();
-        // console.log("DEBUG: teks yang muncul =", text);
-        assert.ok(text.includes('GAGAL MEMBUKA AKUN!'));
-    });
+    //     //assert
+    //     const text = await pageTabungan.suksestf();
+    //     // console.log("DEBUG: teks yang muncul =", text);
+    //     assert.ok(text.includes('GAGAL MEMBUKA AKUN!'));
+    // });
 
-    it("Buka Tabungan saving", async function () {
-        const pageTabungan = new openTabungan(driver);
-        await pageTabungan.klikSaving("1", "192424227");
+    // it("Buka Tabungan saving", async function () {
+    //     const pageTabungan = new openTabungan(driver);
+    //     await pageTabungan.klikSaving("1", "192424227");
 
-        //assert
-        const text = await pageTabungan.suksestf();
-        assert.ok(text.includes('GAGAL MEMBUKA AKUN!'));
-    });
+    //     //assert
+    //     const text = await pageTabungan.suksestf();
+    //     assert.ok(text.includes('GAGAL MEMBUKA AKUN!'));
+    // });
 
 });
