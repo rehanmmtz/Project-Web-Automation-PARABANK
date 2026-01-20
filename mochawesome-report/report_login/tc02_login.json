@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-11-08T20:26:19.597Z",
-    "end": "2025-11-08T20:26:25.829Z",
-    "duration": 6232,
+    "start": "2026-01-20T17:33:40.307Z",
+    "end": "2026-01-20T17:33:46.521Z",
+    "duration": 6214,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,25 +18,25 @@
   },
   "results": [
     {
-      "uuid": "fa9bb232-3d2f-4327-a7f8-fc7bdfe572db",
+      "uuid": "78ffdc25-2a03-40d4-9f25-8d0c2ccd8917",
       "title": "",
-      "fullFile": "D:\\projekan\\test_case\\tc02_login.test.js",
+      "fullFile": "D:\\Bootcamp QA\\projekan_bank\\test_case\\tc02_login.test.js",
       "file": "\\test_case\\tc02_login.test.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "13d68684-a945-4aa9-ad28-8dfc87405073",
+          "uuid": "bb4b53f9-6e39-4e2b-85e0-c19ae86e7026",
           "title": "Login",
-          "fullFile": "D:\\projekan\\test_case\\tc02_login.test.js",
+          "fullFile": "D:\\Bootcamp QA\\projekan_bank\\test_case\\tc02_login.test.js",
           "file": "\\test_case\\tc02_login.test.js",
           "beforeHooks": [
             {
               "title": "\"before each\" hook in \"Login\"",
               "fullTitle": "Login \"before each\" hook in \"Login\"",
               "timedOut": false,
-              "duration": 2539,
+              "duration": 1773,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();\nawait driver.manage().window().maximize();\nawait driver.get('https://parabank.parasoft.com/parabank/index.htm');",
               "err": {},
-              "uuid": "5fd9fcde-7849-4271-8249-9be38bc4fbff",
-              "parentUUID": "13d68684-a945-4aa9-ad28-8dfc87405073",
+              "uuid": "4d09420b-1346-41fa-9748-ddde7f77864a",
+              "parentUUID": "bb4b53f9-6e39-4e2b-85e0-c19ae86e7026",
               "isHook": true,
               "skipped": false
             }
@@ -56,7 +56,7 @@
               "title": "\"after each\" hook in \"Login\"",
               "fullTitle": "Login \"after each\" hook in \"Login\"",
               "timedOut": false,
-              "duration": 2098,
+              "duration": 2115,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "await driver.sleep(2000);\nawait driver.quit();",
               "err": {},
-              "uuid": "e1ed3dbe-2b3b-4c49-8e1c-118143edaa7b",
-              "parentUUID": "13d68684-a945-4aa9-ad28-8dfc87405073",
+              "uuid": "abd52f16-27a0-4898-a9da-336a72652a80",
+              "parentUUID": "bb4b53f9-6e39-4e2b-85e0-c19ae86e7026",
               "isHook": true,
               "skipped": false
             }
@@ -76,29 +76,29 @@
               "title": "Login",
               "fullTitle": "Login Login",
               "timedOut": false,
-              "duration": 1586,
+              "duration": 2316,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const pageLogin = new Login(driver);\nawait pageLogin.inputnamanya(\"rehan001\", \"123\");\nconst isDisplayed = await pageLogin.akunOverview();\nassert.ok(isDisplayed.includes('Accounts Overview'));\nlet full_ss = await driver.takeScreenshot();\nfs.writeFileSync('report_ss/login/success_login.png', Buffer.from(full_ss, 'base64'));",
+              "code": "const pageLogin = new Login(driver);\nawait pageLogin.inputnamanya(\"rehan16\", \"123\");\nconst isDisplayed = await pageLogin.akunOverview();\nassert.ok(isDisplayed.includes('Accounts Overview'));\nlet full_ss = await driver.takeScreenshot();\nfs.writeFileSync('report_ss/login/success_login.png', Buffer.from(full_ss, 'base64'));",
               "err": {},
-              "uuid": "5426c95d-6cd1-4a18-9db1-4bb6614d6197",
-              "parentUUID": "13d68684-a945-4aa9-ad28-8dfc87405073",
+              "uuid": "ab54ff1c-5ab7-4a4f-942b-7002aaf9bf1b",
+              "parentUUID": "bb4b53f9-6e39-4e2b-85e0-c19ae86e7026",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5426c95d-6cd1-4a18-9db1-4bb6614d6197"
+            "ab54ff1c-5ab7-4a4f-942b-7002aaf9bf1b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1586,
+          "duration": 2316,
           "root": false,
           "rootEmpty": false,
           "_timeout": 50000

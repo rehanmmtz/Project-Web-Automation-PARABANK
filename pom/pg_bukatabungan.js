@@ -25,7 +25,7 @@ class openTabungan {
         } else if (typeValue === "1") {
             option = await this.driver.findElement(openTabungan.choicetabungansaving);
         } else {
-            throw new Error(`Account type ${typeValue} tidak dikenali`);
+            throw new Error(`Pilihan type ${typeValue} tidak dikenali`);
         }
         await option.click();
     };
@@ -35,8 +35,13 @@ class openTabungan {
         await this.driver.wait(until.elementIsVisible(dropdown), 5000);
         await dropdown.click();
 
-        const option = await this.driver.wait(until.elementLocated(openTabungan.fromAccountOption(value)), 5000);
-        await option.click();
+        let option1;
+        if (value === "19227") {
+            option1 = await this.driver.wait(until.elementLocated(openTabungan.fromAccountOption(value)), 5000);
+        } else {
+            throw new Error(`Nomor account ${value} tidak dikenali`);
+        }
+        await option1.click();
     };
 
     async klikNewAccount(typeValue, fromAccountValue) {

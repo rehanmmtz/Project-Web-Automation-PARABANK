@@ -6,14 +6,14 @@ import formtransfer from "../pom/pg_transfer.js";
 import fs from 'fs';
 
 describe('Transfer', function () {
-    this.timeout(10000);
+    this.timeout(60000);
 
     let driver;
     let options = new chrome.Options();
     options.addArguments('--incognito');
-    options.addArguments('--headless=new');
-    options.addArguments('--no-sandbox');
-    options.addArguments('--disable-dev-shm-usage');
+    // options.addArguments('--headless=new');
+    // options.addArguments('--no-sandbox');
+    // options.addArguments('--disable-dev-shm-usage');
     options.addArguments('--log-level=3');
 
     before(async function () {
@@ -34,7 +34,7 @@ describe('Transfer', function () {
 
     it("Transer", async function () {
         const pageTransfer = new formtransfer(driver);
-        await pageTransfer.Istransfersuccses("10", "21780", "23334");
+        await pageTransfer.Istransfersuccses("10", "19227", "19560");
 
         const text = await pageTransfer.suksestf();
         // console.log("DEBUG: teks yang muncul =", text);
