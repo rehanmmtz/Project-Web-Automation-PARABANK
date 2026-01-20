@@ -33,41 +33,42 @@ describe('Buka Tabungan', function () {
         await driver.quit();
     });
 
-    // it("Buka Tabungan checking", async function () {
-    //     const pageTabungan = new openTabungan(driver);
-    //     await pageTabungan.klikChecking("0", "19227");
+    // CASE POSITIVE
+    it("Buka Tabungan checking", async function () {
+        const pageTabungan = new openTabungan(driver);
+        await pageTabungan.klikChecking("0", "19227");
 
-    //     //assert
-    //     const text = await pageTabungan.suksestf();
-    //     // console.log("DEBUG: teks yang muncul =", text);
-    //     assert.ok(text.includes('Account Opened!'));
+        //assert
+        const text = await pageTabungan.suksestf();
+        // console.log("DEBUG: teks yang muncul =", text);
+        assert.ok(text.includes('Account Opened!'));
 
-    //     let full_ss = await driver.takeScreenshot();
-    //     fs.writeFileSync('report_ss/buka_tabungan/checking.png', Buffer.from(full_ss, 'base64'));
-    // });
+        let full_ss = await driver.takeScreenshot();
+        fs.writeFileSync('report_ss/buka_tabungan/checking.png', Buffer.from(full_ss, 'base64'));
+    });
 
-    // it("Buka Tabungan saving", async function () {
-    //     const pageTabungan = new openTabungan(driver);
-    //     await pageTabungan.klikSaving("1", "19227");
+    it("Buka Tabungan saving", async function () {
+        const pageTabungan = new openTabungan(driver);
+        await pageTabungan.klikSaving("1", "19227");
 
-    //     //assert
-    //     const text = await pageTabungan.suksestf();
-    //     assert.ok(text.includes('Account Opened!'), 'akun gagal dibuat');
+        //assert
+        const text = await pageTabungan.suksestf();
+        assert.ok(text.includes('Account Opened!'), 'akun gagal dibuat');
 
-    //     let full_ss = await driver.takeScreenshot();
-    //     fs.writeFileSync('report_ss/buka_tabungan/savings.png', Buffer.from(full_ss, 'base64'));
-    // });
+        let full_ss = await driver.takeScreenshot();
+        fs.writeFileSync('report_ss/buka_tabungan/savings.png', Buffer.from(full_ss, 'base64'));
+    });
 
-    // CASE NEGATIVE
-    // it("Buka Tabungan checking", async function () {
-    //     const pageTabungan = new openTabungan(driver);
-    //     await pageTabungan.klikChecking("0", "1922347");
+    CASE NEGATIVE
+    it("Buka Tabungan checking", async function () {
+        const pageTabungan = new openTabungan(driver);
+        await pageTabungan.klikChecking("0", "1922347");
 
-    //     //assert
-    //     const text = await pageTabungan.suksestf();
-    //     // console.log("DEBUG: teks yang muncul =", text);
-    //     assert.ok(text.includes('GAGAL MEMBUKA AKUN!'));
-    // });
+        //assert
+        const text = await pageTabungan.suksestf();
+        // console.log("DEBUG: teks yang muncul =", text);
+        assert.ok(text.includes('GAGAL MEMBUKA AKUN!'));
+    });
 
     it("Buka Tabungan saving", async function () {
         const pageTabungan = new openTabungan(driver);
