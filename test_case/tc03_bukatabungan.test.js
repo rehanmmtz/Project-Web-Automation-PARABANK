@@ -59,7 +59,7 @@ describe('Buka Tabungan', function () {
         fs.writeFileSync('report_ss/buka_tabungan/savings.png', Buffer.from(full_ss, 'base64'));
     });
 
-    CASE NEGATIVE
+    // CASE NEGATIVE
     it("Buka Tabungan checking", async function () {
         const pageTabungan = new openTabungan(driver);
         await pageTabungan.klikChecking("0", "1922347");
